@@ -1,0 +1,104 @@
+<resources>
+    <string name="app_name">ShieldUp</string>
+    <string name="logging_in">Logging in...</string>
+    <string name="login">Login</string>
+    <string name="login_success">Welcome back! Login successful.</string>
+    <string name="verify_email_prompt">Please verify your email address first.</string>
+    <string name="email_required">Email is required</string>
+    <string name="invalid_email">Please enter a valid email address</string>
+    <string name="password_required">Password is required</string>
+    <string name="password_too_short">Password must be at least 6 characters</string>
+    <string name="error_no_account">No account found with this email address. Please sign up first.</string>
+    <string name="error_invalid_credentials">Invalid email or password. Please try again.</string>
+    <string name="email_not_found">Email not found</string>
+    <string name="incorrect_password">Incorrect password</string>
+    <string name="enter_email_first">Please enter your email address first</string>
+    <string name="reset_email_sent">Password reset email sent to %1$s</string>
+    <string name="reset_email_failed">Failed to send reset email: %1$s</string>
+    <string name="verification_email_sent">Verification email sent to %1$s</string>
+    <string name="verification_email_failed">Failed to send verification email</string>
+    <string name="creating_account">Creating Account...</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="account_created_verify">Account created successfully! Please verify your email.</string>
+    <string name="user_data_failed">Failed to save user data: %1$s</string>
+<!--    <string name="verification_email_sent">Verification email sent to %1$s</string>-->
+<!--    <string name="verification_email_failed">Failed to send verification email</string>-->
+    <string name="profile_update_failed">Failed to update profile: %1$s</string>
+    <string name="weak_password">Password is too weak. Please choose a stronger password.</string>
+    <string name="email_already_registered">An account with this email already exists. Please login instead.</string>
+    <string name="signup_failed">Signup failed: %1$s</string>
+    <string name="name_required">Name is required</string>
+    <string name="name_too_short">Name must be at least 2 characters</string>
+<!--    <string name="email_required">Email is required</string>-->
+<!--    <string name="invalid_email">Please enter a valid email address</string>-->
+<!--    <string name="password_required">Password is required</string>-->
+<!--    <string name="password_too_short">Password must be at least 6 characters</string>-->
+    <string name="password_strength">Password must contain at least one letter and one number</string>
+    <string name="confirm_password_required">Please confirm your password</string>
+    <string name="passwords_not_match">Passwords do not match</string>
+    <string name="mobile_required">Mobile number is required</string>
+    <string name="invalid_mobile">Please enter a valid 10-digit mobile number</string>
+
+
+    <string name="sos_stopped">SOS Stopped</string>
+    <!-- res/values/strings.xml -->
+    <string name="welcome_message">Welcome, %1$s! 👋</string>
+
+
+<!--    <string name="creating_account">Creating Account...</string>-->
+<!--    <string name="sign_up">Sign Up</string>-->
+<!--    <string name="profile_update_failed">Failed to update profile</string>-->
+    <string name="account_created_verify_email">Account created successfully! Please verify your email.</string>
+<!--    <string name="verification_email_sent">Verification email sent to %1$s</string>-->
+<!--    <string name="verification_email_failed">Failed to send verification email</string>-->
+    <string name="firestore_save_failed">Failed to save user data: %1$s</string>
+    <string name="name_error">Name must be at least 2 characters</string>
+    <string name="email_error">Please enter a valid email address</string>
+    <string name="password_error">Password must contain letters and digits, min 6 characters</string>
+    <string name="confirm_password_error">Passwords do not match</string>
+    <string name="mobile_error">Please enter a valid 10-digit mobile number</string>
+<!--    <string name="weak_password">Password is too weak</string>-->
+    <string name="user_exists">An account with this email already exists</string>
+<!--    <string name="signup_failed">Signup failed: %1$s</string>-->
+
+    <string name="welcome_user">Welcome, %1$s! 👋</string>
+    <string name="contact_placeholder">Contact %1$d (Phone Number)</string>
+    <string name="sos_active_status">🆘 SOS Activated - Getting location &amp; recording…</string>
+<!--    <string name="sos_stopped">SOS Stopped</string>-->
+    <string name="sos_active_location">🆘 SOS Active - Location sent: %1$.5f, %2$.5f</string>
+    <string name="profile_info">Name: %1$s\nEmail: %2$s\nEmail Verified: %3$s</string>
+    <string name="profile_title">Profile Information</string>
+
+
+
+<!--    -->
+    <string name="default_user">User</string>
+<!--    <string name="welcome_user">Welcome, %1$s! 👋</string>-->
+<!--    <string name="profile_info">Name: %1$s\nEmail: %2$s\nEmail Verified: %3$s\nAccount Created: %4$s</string>-->
+<!--    <string name="profile_title">👤 Profile Information</string>-->
+    <string name="edit_profile">Edit Profile</string>
+    <string name="profile_edit_coming_soon">Profile editing coming soon</string>
+    <string name="logout">Logout</string>
+    <string name="logout_confirm">Are you sure you want to logout?</string>
+    <string name="cancel">Cancel</string>
+    <string name="logout_success">Logged out successfully</string>
+    <string name="contact_hint">Contact %1$d (Phone Number)</string>
+    <string name="delete">Delete</string>
+    <string name="min_contacts_required">Minimum 3 contacts required</string>
+    <string name="add_at_least_3_contacts">Please add at least 3 valid contacts</string>
+    <string name="contacts_saved">Contacts saved successfully!</string>
+    <string name="permissions_required">Location, SMS, and Audio permissions required for full SOS functionality</string>
+<!--    <string name="add_save_contacts_first">Please add and save contacts first</string>-->
+    <string name="sos_activated">🆘 SOS Activated - Getting location &amp; starting recording...</string>
+    <string name="sos_started">🆘 SOS Activated: Location tracking + Audio recording started</string>
+<!--    <string name="sos_stopped">SOS Stopped</string>-->
+    <string name="sos_stopped_msg">🛑 SOS Stopped: Location tracking + Audio recording ended</string>
+    <string name="audio_active">Audio recording: ACTIVE</string>
+    <string name="audio_inactive">Audio recording: INACTIVE</string>
+    <string name="someone">Someone</string>
+    <string name="all_permissions_granted">✅ All permissions granted - SOS fully functional</string>
+    <string name="missing_permissions">⚠️ Missing permissions: %1$s</string>
+    <string name="add_save_contacts_first">Please add and save contacts first</string>
+
+
+</resources>

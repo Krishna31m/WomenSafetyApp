@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Internal storage for SOS recordings -->
+    <files-path
+        name="sos_recordings"
+        path="SOSRecordings/" />
+
+    <!-- Cache directory for temporary files -->
+    <cache-path
+        name="cache"
+        path="." />
+
+    <!-- External files directory (if needed for sharing) -->
+    <external-files-path
+        name="external_files"
+        path="." />
+</paths>

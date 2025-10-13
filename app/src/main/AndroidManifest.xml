@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.krishna.soslocation">
+
+    <!-- Essential permissions for SOS functionality -->
+
+    <!-- Location permissions for real-time tracking -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- Background location for continuous tracking during SOS -->
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION"
+        tools:targetApi="q" />
+
+    <!-- SMS permissions for sending emergency messages -->
+    <uses-permission android:name="android.permission.SEND_SMS" />
+
+    <!-- AUDIO RECORDING permissions for emergency voice recording -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28" />
+
+    <!-- Network permissions for Google Maps location links & Firebase -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <!-- Wake lock to keep app running during emergency -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <!-- Foreground service permission for background operation -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_LOCATION"
+        tools:targetApi="34" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MICROPHONE"
+        tools:targetApi="34" />
+
+<!--    recorderactivity permission-->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+<!--    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />-->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <!-- Hardware requirements -->
+    <uses-feature
+        android:name="android.hardware.location"
+        android:required="true" />
+
+    <uses-feature
+        android:name="android.hardware.location.gps"
+        android:required="true" />
+
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="true" />
+
+    <!-- Microphone requirement for audio recording -->
+    <uses-feature
+        android:name="android.hardware.microphone"
+        android:required="true" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.SOSLocation"
+        tools:targetApi="31">
+
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyD4-i3oGh4TWl56f3zQrsjSw2zbk5uV81Y" />
+
+        <!-- Splash Activity - Entry point of the app -->
+        <activity
+            android:name=".SplashActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.SOSLocation.Splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Login Activity - User authentication -->
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.SOSLocation.Auth"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- Signup Activity - User registration -->
+        <activity
+            android:name=".SignupActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.SOSLocation.Auth"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- Main Activity - Core SOS functionality -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask" />
+
+        <activity
+            android:name=".MapActivity"
+            android:exported="false"
+            android:label="Emergency Locations Map" />
+        <activity android:name=".ChatActivity"
+            android:exported="false"
+            android:label="Chat Sending message"
+        />
+
+        <activity
+            android:name=".ProfileActivity"
+            android:exported="false"/>
+
+        <activity
+            android:name=".RecorderActivity"
+            android:exported="false"
+            android:label="Emergency Recorder"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
+
+<!--         Recorder Activity - Emergency audio recording -->
+<!--        <activity-->
+<!--            android:name=""-->
+<!--            android:exported="false"-->
+<!--            android:screenOrientation="portrait"-->
+<!--            android:launchMode="singleTop"-->
+<!--            android:theme="@style/Theme.SOSLocation.NoActionBar"-->
+<!--            android:label="SOS Audio Recorder">-->
+
+
+            <!-- Allow activity to be launched from background during emergency -->
+            <intent-filter>
+                <action android:name="android.intent.action.VOICE_COMMAND" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- Meta-data for Google Play Services -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <!-- File provider for sharing recordings if needed -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <!-- Keep screen on during emergency -->
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+    </application>
+
+</manifest>
+
+
+
+    <!--<?xml version="1.0" encoding="utf-8"?>-->
+    <!--<manifest xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--    xmlns:tools="http://schemas.android.com/tools">-->
+
+    <!--    &lt;!&ndash; Essential permissions for SOS functionality &ndash;&gt;-->
+    <!--    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />-->
+    <!--    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />-->
+    <!--    <uses-permission android:name="android.permission.SEND_SMS" />-->
+    <!--    <uses-permission android:name="android.permission.RECORD_AUDIO" />-->
+    <!--    <uses-permission android:name="android.permission.INTERNET" />-->
+    <!--    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />-->
+    <!--    <uses-permission android:name="android.permission.WAKE_LOCK" />-->
+    <!--    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />-->
+    <!--    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_LOCATION" />-->
+
+    <!--    &lt;!&ndash; Hardware features (make some optional) &ndash;&gt;-->
+    <!--    <uses-feature-->
+    <!--        android:name="android.hardware.location"-->
+    <!--        android:required="true" />-->
+    <!--    <uses-feature-->
+    <!--        android:name="android.hardware.location.gps"-->
+    <!--        android:required="true" />-->
+    <!--    <uses-feature-->
+    <!--        android:name="android.hardware.telephony"-->
+    <!--        android:required="false" />-->
+    <!--    <uses-feature-->
+    <!--        android:name="android.hardware.microphone"-->
+    <!--        android:required="false" />-->
+
+    <!--    <application-->
+    <!--        android:allowBackup="true"-->
+    <!--        android:dataExtractionRules="@xml/data_extraction_rules"-->
+    <!--        android:fullBackupContent="@xml/backup_rules"-->
+    <!--        android:icon="@mipmap/ic_launcher"-->
+    <!--        android:label="@string/app_name"-->
+    <!--        android:theme="@style/Theme.SOSLocation"-->
+    <!--        tools:targetApi="31">-->
+
+    <!--        &lt;!&ndash; Splash Activity &ndash;&gt;-->
+    <!--        <activity-->
+    <!--            android:name=".SplashActivity"-->
+    <!--            android:exported="true"-->
+    <!--            android:screenOrientation="portrait"-->
+    <!--            android:theme="@style/Theme.SOSLocation.Splash">-->
+    <!--            <intent-filter>-->
+    <!--                <action android:name="android.intent.action.MAIN" />-->
+    <!--                <category android:name="android.intent.category.LAUNCHER" />-->
+    <!--            </intent-filter>-->
+    <!--        </activity>-->
+
+    <!--        &lt;!&ndash; Login Activity &ndash;&gt;-->
+    <!--        <activity-->
+    <!--            android:name=".LoginActivity"-->
+    <!--            android:exported="false"-->
+    <!--            android:screenOrientation="portrait"-->
+    <!--            android:theme="@style/Theme.SOSLocation"-->
+    <!--            android:windowSoftInputMode="adjustResize" />-->
+
+    <!--        &lt;!&ndash; Signup Activity &ndash;&gt;-->
+    <!--        <activity-->
+    <!--            android:name=".SignupActivity"-->
+    <!--            android:exported="false"-->
+    <!--            android:screenOrientation="portrait"-->
+    <!--            android:theme="@style/Theme.SOSLocation"-->
+    <!--            android:windowSoftInputMode="adjustResize" />-->
+
+    <!--        &lt;!&ndash; Main Activity &ndash;&gt;-->
+    <!--        <activity-->
+    <!--            android:name=".MainActivity"-->
+    <!--            android:exported="false"-->
+    <!--            android:screenOrientation="portrait"-->
+    <!--            android:launchMode="singleTask" />-->
+
+    <!--        &lt;!&ndash; Recorder Activity &ndash;&gt;-->
+    <!--        <activity-->
+    <!--            android:name=".RecorderActivity"-->
+    <!--            android:exported="false"-->
+    <!--            android:screenOrientation="portrait"-->
+    <!--            android:launchMode="singleTop"-->
+    <!--            android:theme="@style/Theme.SOSLocation"-->
+    <!--            android:label="SOS Audio Recorder" />-->
+
+    <!--        &lt;!&ndash; File Provider &ndash;&gt;-->
+    <!--        <provider-->
+    <!--            android:name="androidx.core.content.FileProvider"-->
+    <!--            android:authorities="${applicationId}.fileprovider"-->
+    <!--            android:exported="false"-->
+    <!--            android:grantUriPermissions="true">-->
+    <!--            <meta-data-->
+    <!--                android:name="android.support.FILE_PROVIDER_PATHS"-->
+    <!--                android:resource="@xml/file_paths" />-->
+    <!--        </provider>-->
+
+    <!--    </application>-->
+    <!--</manifest>-->
+
+
+
+
+
+
+    <!-- ==========================================================================================================   -->
+

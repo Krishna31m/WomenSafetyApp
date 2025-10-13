@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="100dp"
+    android:height="100dp"
+    android:viewportWidth="100"
+    android:viewportHeight="100">
+
+    <!-- Outer circle -->
+    <path
+        android:fillColor="#E91E63"
+        android:pathData="M50,10 A40,40 0 1,1 50,90 A40,40 0 1,1 50,10 Z" />
+
+    <!-- Inner shield -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M50,20 L35,30 L35,50 C35,65 50,75 50,75 C50,75 65,65 65,50 L65,30 Z" />
+
+    <!-- SOS text -->
+    <path
+        android:fillColor="#E91E63"
+        android:pathData="M42,45 L42,50 L45,50 L45,55 L42,55 L42,60 L48,60 L48,55 L45,55 L45,50 L48,50 L48,45 Z
+                  M50,45 C48,45 46,47 46,49 L46,56 C46,58 48,60 50,60 L54,60 C56,60 58,58 58,56 L58,49 C58,47 56,45 54,45 Z
+                  M50,48 L54,48 C54.5,48 55,48.5 55,49 L55,56 C55,56.5 54.5,57 54,57 L50,57 C49.5,57 49,56.5 49,56 L49,49 C49,48.5 49.5,48 50,48 Z" />
+
+</vector>

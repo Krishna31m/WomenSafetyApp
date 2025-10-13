@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "377096914565",
+    "project_id": "ludoin-b6b82",
+    "storage_bucket": "ludoin-b6b82.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:377096914565:android:620ba60a5bfe373e958bec",
+        "android_client_info": {
+          "package_name": "com.krishna.soslocation"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDs9DRRTjs8_i8dC2V4aNR_w6G3LJlbX2M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
