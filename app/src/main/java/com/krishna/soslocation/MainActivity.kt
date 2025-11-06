@@ -67,7 +67,7 @@ class MainActivity : AppCompatActivity() {
         setSupportActionBar(toolbar)
 
         // Now your menu will appear
-        supportActionBar?.title = "ShieldUp"
+        supportActionBar?.title = "RakshaSetu"
 
         // Initialize Firebase instances
         firebaseAuth = FirebaseAuth.getInstance()

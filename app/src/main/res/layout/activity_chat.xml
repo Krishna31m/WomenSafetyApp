@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ECE5DD"
-    tools:context=".ChatActivity">
+    android:background="#F5F5F5">
 
     <!-- Toolbar -->
     <androidx.appcompat.widget.Toolbar
@@ -21,80 +18,176 @@
         app:layout_constraintTop_toTopOf="parent"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
 
-    <!-- Messages RecyclerView -->
+    <!-- Chat Messages RecyclerView -->
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerViewMessages"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:padding="8dp"
+        android:id="@+id/recyclerViewChat"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/inputLayout"
         android:clipToPadding="false"
-        app:layout_constraintBottom_toTopOf="@+id/inputLayout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar"
-        tools:listitem="@layout/item_message_sent" />
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp" />
 
-    <!-- Empty State Text -->
-    <TextView
-        android:id="@+id/emptyStateText"
+    <!-- Progress Bar -->
+    <ProgressBar
+        android:id="@+id/progressBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="No messages yet\nStart a conversation"
-        android:textAlignment="center"
-        android:textColor="#757575"
-        android:textSize="16sp"
-        android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="@+id/recyclerViewMessages"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/recyclerViewMessages" />
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
 
     <!-- Input Layout -->
     <LinearLayout
         android:id="@+id/inputLayout"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#FFFFFF"
-        android:elevation="8dp"
-        android:gravity="center_vertical"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/white"
+        android:elevation="4dp"
         android:orientation="horizontal"
-        android:padding="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        android:padding="8dp">
 
-        <!-- Message Input -->
         <EditText
             android:id="@+id/editTextMessage"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/bg_message_input"
-            android:hint="Type a message"
+            android:hint="Type a message..."
             android:imeOptions="actionSend"
-            android:inputType="textCapSentences|textMultiLine"
+            android:inputType="textMultiLine|textCapSentences"
             android:maxLines="4"
-            android:minHeight="40dp"
+            android:minHeight="48dp"
             android:padding="12dp"
-            android:textColor="#000000"
-            android:textColorHint="#999999"
             android:textSize="16sp" />
 
-        <!-- Send Button -->
         <ImageButton
             android:id="@+id/buttonSend"
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:layout_marginStart="8dp"
             android:background="?attr/selectableItemBackgroundBorderless"
-            android:contentDescription="Send message"
-            android:padding="8dp"
+            android:contentDescription="Send"
             android:src="@drawable/ic_send"
-            android:tint="?attr/colorPrimary" />
-
+            android:tint="@color/design_default_color_primary" />
     </LinearLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<androidx.constraintlayout.widget.ConstraintLayout-->
+<!--    xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    xmlns:tools="http://schemas.android.com/tools"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    android:background="#ECE5DD"-->
+<!--    tools:context=".ChatActivity">-->
+
+<!--    &lt;!&ndash; Toolbar &ndash;&gt;-->
+<!--    <androidx.appcompat.widget.Toolbar-->
+<!--        android:id="@+id/toolbar"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="?attr/actionBarSize"-->
+<!--        android:background="?attr/colorPrimary"-->
+<!--        android:elevation="4dp"-->
+<!--        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />-->
+
+<!--    &lt;!&ndash; Messages RecyclerView &ndash;&gt;-->
+<!--    <androidx.recyclerview.widget.RecyclerView-->
+<!--        android:id="@+id/recyclerViewMessages"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:padding="8dp"-->
+<!--        android:clipToPadding="false"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/inputLayout"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/toolbar"-->
+<!--        tools:listitem="@layout/item_message_sent" />-->
+
+<!--    &lt;!&ndash; Empty State Text &ndash;&gt;-->
+<!--    <TextView-->
+<!--        android:id="@+id/emptyStateText"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="No messages yet\nStart a conversation"-->
+<!--        android:textAlignment="center"-->
+<!--        android:textColor="#757575"-->
+<!--        android:textSize="16sp"-->
+<!--        android:visibility="gone"-->
+<!--        app:layout_constraintBottom_toBottomOf="@+id/recyclerViewMessages"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/recyclerViewMessages" />-->
+
+<!--    &lt;!&ndash; Input Layout &ndash;&gt;-->
+<!--    <LinearLayout-->
+<!--        android:id="@+id/inputLayout"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:background="#FFFFFF"-->
+<!--        android:elevation="8dp"-->
+<!--        android:gravity="center_vertical"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:padding="8dp"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent">-->
+
+<!--        &lt;!&ndash; Message Input &ndash;&gt;-->
+<!--        <EditText-->
+<!--            android:id="@+id/editTextMessage"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="1"-->
+<!--            android:background="@drawable/bg_message_input"-->
+<!--            android:hint="Type a message"-->
+<!--            android:imeOptions="actionSend"-->
+<!--            android:inputType="textCapSentences|textMultiLine"-->
+<!--            android:maxLines="4"-->
+<!--            android:minHeight="40dp"-->
+<!--            android:padding="12dp"-->
+<!--            android:textColor="#000000"-->
+<!--            android:textColorHint="#999999"-->
+<!--            android:textSize="16sp" />-->
+
+<!--        &lt;!&ndash; Send Button &ndash;&gt;-->
+<!--        <ImageButton-->
+<!--            android:id="@+id/buttonSend"-->
+<!--            android:layout_width="48dp"-->
+<!--            android:layout_height="48dp"-->
+<!--            android:layout_marginStart="8dp"-->
+<!--            android:background="?attr/selectableItemBackgroundBorderless"-->
+<!--            android:contentDescription="Send message"-->
+<!--            android:padding="8dp"-->
+<!--            android:src="@drawable/ic_send"-->
+<!--            android:tint="?attr/colorPrimary" />-->
+
+<!--    </LinearLayout>-->
+
+<!--</androidx.constraintlayout.widget.ConstraintLayout>-->
 
 
 

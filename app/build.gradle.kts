@@ -66,6 +66,25 @@ dependencies {
     implementation("com.google.android.gms:play-services-maps:18.1.0")
     implementation("com.google.maps.android:maps-ktx:5.0.0")
 
+//
+    // Maps & Location
+    implementation("com.google.android.gms:play-services-maps:18.2.0")
+    implementation("com.google.android.gms:play-services-location:21.0.1")
+// Material Design (for BottomSheet, FABs, Cards)
+    implementation("com.google.android.material:material:1.11.0")
+// Coroutines for background API calls
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
+    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.6.2")
+// HTTP Client (OkHttp is recommended over HttpURLConnection for stability)
+    implementation("com.squareup.okhttp3:okhttp:4.12.0")
+
+//
+//    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
+//    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.6.2")
+//    implementation("com.google.ai.client:generativeai:0.9.0")
+//    implementation("com.google.ai.client.generativeai:generativeai:0.1.2")
+    implementation("com.google.ai.client.generativeai:generativeai:0.2.2")
+
 }
 //--------------------------------------------------------------------------------------------------------------------------------
 //

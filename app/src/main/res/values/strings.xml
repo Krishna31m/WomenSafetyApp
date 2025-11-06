@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">ShieldUp</string>
+    <string name="app_name">RakshaSetu</string>
     <string name="logging_in">Logging in...</string>
     <string name="login">Login</string>
     <string name="login_success">Welcome back! Login successful.</string>
