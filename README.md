@@ -631,12 +631,12 @@ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
 
 **Developer:** Krishna
 
-- 📧 Email: krishna@example.com
-- 💼 LinkedIn: [linkedin.com/in/krishna-dev](https://linkedin.com/in/krishna-dev)
-- 🐙 GitHub: [@krishna](https://github.com/krishna)
-- 🌐 Website: [www.rakshasetu.com](https://www.rakshasetu.com)
+- 📧 Email: krishnamukhiya842@gmail.com
+- 💼 LinkedIn: [linkedin.com/in/krishna-dev](https://www.linkedin.com/in/krishnakumarmukhiya/)
+- 🐙 GitHub: [@krishna](https://github.com/krishna31m)
+- 🌐 Website: [www.rakshasetu.com]()
 
-**Project Link:** [https://github.com/krishna/rakshasetu](https://github.com/krishna/rakshasetu)
+**Project Link:** [https://github.com/krishna/rakshasetu](https://github.com/Krishna31m/WomenSafetyApp)
 
 ---
 
