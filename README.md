@@ -117,7 +117,7 @@ RakshaSetu combines emergency response systems, GPS tracking, and AI assistance 
 
 | Home Screen | Safety Map | AI Chat | Emergency Contacts |
 |-------------|------------|---------|-------------------|
-| ![Home](https://drive.google.com/file/d/12zrfGauL3WZOpbLCtZHfKDC9quzhkVFS/view) | ![Map](https://drive.google.com/file/d/1AxCMxzh1M5rM8b_gAhBoaxD1vKmfvtLj/view) | ![Chat](https://drive.google.com/file/d/1DZiq5IihPbcHjqMJjozknlHYIGmYh4aA/view) | ![Profile](https://drive.google.com/file/d/1-FkWOjSstINOqdgtxk9gaAJuJBrSsXte/view) |
+| ![Home](https://drive.google.com/uc?export=view&id=12zrfGauL3WZOpbLCtZHfKDC9quzhkVFS) | ![Map](https://drive.google.com/uc?export=view&id=1AxCMxzh1M5rM8b_gAhBoaxD1vKmfvtLj) | ![Chat](https://drive.google.com/uc?export=view&id=1DZiq5IihPbcHjqMJjozknlHYIGmYh4aA) | ![Profile](https://drive.google.com/uc?export=view&id=1-FkWOjSstINOqdgtxk9gaAJuJBrSsXte) |
 
 </div>
 
