@@ -73,7 +73,7 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback {
     private var currentRoutePoints: List<LatLng> = emptyList()
 
     // API Key
-    private val GOOGLE_API_KEY = "AIzaSyD4-i3oGh4TWl56f3zQrsjSw2zbk5uV81Y"
+    private val GOOGLE_API_KEY = "Map_API_KEY"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
