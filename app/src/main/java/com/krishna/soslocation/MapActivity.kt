@@ -621,7 +621,7 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback {
 //    private var currentLocation: Location? = null
 //    private val markerPlaceMap = mutableMapOf<Marker, LatLng>()
 //
-//    private val apiKey = "AIzaSyD4-i3oGh4TWl56f3zQrsjSw2zbk5uV81Y" // "AIzaSyCarxDw-8IzNS_IHR7Ms-6uJT4bFiGqlnk"
+//    private val apiKey = ""
 //
 //    companion object {
 //        private const val TAG = "MapActivity"
