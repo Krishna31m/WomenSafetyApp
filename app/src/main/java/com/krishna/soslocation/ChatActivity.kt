@@ -30,7 +30,7 @@ class ChatActivity : AppCompatActivity() {
     private val scope = CoroutineScope(Dispatchers.Main + SupervisorJob())
 
     // Add your Gemini API key here
-    private val GEMINI_API_KEY = "AIzaSyCo6axk1QFoINp9-CyrlGDVIIKbFfjsxZk"
+    private val GEMINI_API_KEY = "Enter your API"
     private val GEMINI_API_URL = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent"
 
     override fun onCreate(savedInstanceState: Bundle?) {
